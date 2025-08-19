@@ -39,17 +39,17 @@ Backend will run at: http://localhost:5000
 
 ### Login Page
 **Desktop**
-![Login Desktop](./screenshots/login-desktop.png)
+![Login Desktop](./Screenshots/login-desktop.png)
 
 **Mobile**
-![Login Mobile](./screenshots/login-mobile.png)
+![Login Mobile](./Screenshots/login-mobile.png)
 
 ### Tickets
 **Desktop**
-![Tickets Desktop](./screenshots/tickets-desktop.png)
+![Tickets Desktop](./Screenshots/tickets-desktop.png)
 
 **Mobile**
-![Tickets Mobile](./screenshots/tickets-mobile.png)
+![Tickets Mobile](./Screenshots/tickets-mobile.png)
 
 
 ## ⚙️ Setup Instructions
