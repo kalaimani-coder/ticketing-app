@@ -1,114 +1,109 @@
-🎫 Ticketing App
+# 🎫 Ticketing App
 
-A mobile-first responsive support ticket application built with React, Node.js, Express, PostgreSQL, and TailwindCSS.
-Users can create, view, and update support tickets. The app is deployed on Vercel for frontend hosting.
+A **full-stack responsive support ticketing application** built with **React (Vite + Tailwind CSS)** on the frontend and **Node.js + Express + PostgreSQL (Prisma)** on the backend.  
+Deployed live on **Vercel**: [ticketing-app-2dyp.vercel.app](https://ticketing-app-2dyp.vercel.app)
 
-🔗 Live Demo: ticketing-app-2dyp.vercel.app
+---
 
-**📌 Features
+## 🚀 Features
 
-Frontend (React.js + TailwindCSS)**
+- **Login (Mock)** – no real authentication, just a simple username/password form.
+- **Create Ticket** – users can submit support tickets with:
+  - Title
+  - Description
+  - Priority (Low / Medium / High)
+- **View Tickets** – users can view all tickets in a list/table.
+- **Update Ticket** – change ticket status to:
+  - In Progress
+  - Closed
+- **Delete Ticket** – remove a ticket from the system.
+- **Mobile-First Responsive Design** with Tailwind CSS.
+- **State Management** using React Context API.
+- **RESTful API** with Express + PostgreSQL (via Prisma ORM).
 
-🔐 Mock Login (username + password, no real authentication required)
+---
 
-📝 Create Ticket (form with Title, Description, Priority dropdown)
+## 🛠️ Tech Stack
 
-📋 View Tickets (list of tickets with status and priority)
+### Frontend
+- React (Vite)
+- Tailwind CSS
+- React Router
+- Context API
 
-🔄 Update Ticket Status (In Progress / Closed)
+### Backend
+- Node.js + Express
+- PostgreSQL
+- Prisma ORM
 
-📱 Mobile-first responsive design
+### Deployment
+- Frontend: Vercel  
+- Backend: (local / can be deployed to Render or Railway)
 
-**Backend (Node.js + Express + PostgreSQL)
-**
-POST /api/tickets → Create new ticket
+---
 
-GET /api/tickets → Fetch all tickets
+     ## 📂 Project Structure
+     ticketing-app/
+     │
+     ├── frontend/             # React + Vite + Tailwind frontend
+     │   ├── src/
+     │   │   ├── components/   # Login, TicketForm, TicketList
+     │   │   ├── context/      # AuthContext.jsx
+     │   │   ├── App.jsx
+     │   │   └── main.jsx
+     │   └── package.json
+     │
+     ├── backend/              # Node.js + Express backend
+     │   ├── prisma/           # Prisma schema
+     │   ├── server.js         # API endpoints
+     │   └── package.json
+     │
+     ├── screenshots/          # Screenshots for README
+     │   ├── login-desktop.png
+     │   ├── login-mobile.png
+     │   ├── tickets-desktop.png
+     │   └── tickets-mobile.png
+     │
+     └── README.md             # Documentation
 
-PUT /api/tickets/:id → Update ticket status
 
-PostgreSQL schema with Prisma ORM
+**⚡ Setup Instructions**
 
-**Bonus**
-
-Context API for managing authentication state
-
-Deployment with Vercel (frontend)
-
-**🛠️ Tech Stack
-
-Frontend**
-
-React.js (Vite)
-
-TailwindCSS (mobile-first design)
-
-**Backend**
-
-Node.js + Express
-
-PostgreSQL (with Prisma ORM)
-
-**Deployment**
-
-Frontend → Vercel
-
-Backend → (local for now, can extend to Render/Railway)
-
-**📂 Project Structure**
-ticketing-app/
-│
-├── frontend/             # React + Vite + Tailwind frontend
-│   ├── src/
-│   │   ├── components/   # Login, TicketForm, TicketList
-│   │   ├── context/      # AuthContext.jsx
-│   │   ├── App.jsx
-│   │   └── main.jsx
-│   └── package.json
-│
-├── backend/              # Node.js + Express backend
-│   ├── prisma/           # Prisma schema
-│   ├── server.js         # API endpoints
-│   └── package.json
-│
-├── screenshots/          # Screenshots for README
-│   ├── login-desktop.png
-│   ├── login-mobile.png
-│   ├── tickets-desktop.png
-│   └── tickets-mobile.png
-│
-└── README.md             # Documentation
-
-⚙️ Setup Instructions
-1️⃣ Clone Repo
-git clone https://github.com/<your-username>/ticketing-app.git
+### 1. Clone Repository
+--sh
+git clone https://github.com/YOUR_USERNAME/ticketing-app.git
 cd ticketing-app
 
-2️⃣ Frontend Setup
-cd frontend
-npm install
-npm run dev
-App will run at 👉 http://localhost:5173
-
-3️⃣ Backend Setup
+2. Setup Backend
 cd backend
 npm install
-npx prisma migrate dev --name init
+
+
+Configure .env file:
+
+DATABASE_URL="postgresql://USER:PASSWORD@localhost:5432/ticketing"
+PORT=5000
+
+
+Run database migrations:
+
+npx prisma migrate dev
+
+
+Start server:
+
 npm start
-API runs at 👉 http://localhost:5000
 
-**🗄️ Database Schema
-**
 
-| Field       | Type                             |
-| ----------- | -------------------------------- |
-| id          | UUID / Serial (Primary)          |
-| title       | VARCHAR                          |
-| description | TEXT                             |
-| priority    | ENUM (Low, Medium, High)         |
-| status      | ENUM (Open, In Progress, Closed) |
-| created\_at | TIMESTAMP (default now)          |
+Backend runs on http://localhost:5000
 
+3. Setup Frontend
+cd ../frontend
+npm install
+npm run dev
+
+
+Frontend runs on http://localhost:5173
 
 **Screensots**
 ## Screenshots
@@ -127,6 +122,9 @@ API runs at 👉 http://localhost:5000
 **Mobile**
 ![Tickets Mobile](./Screenshots/tickets-mobile.png)
 
+🌍 Live Demo
+🔗 ticketing-app-2dyp.vercel.app
+
 
 🚀 Deployment
 
@@ -137,13 +135,13 @@ Backend → Run locally (can be deployed to Render or Railway)
 
 ✅ Future Improvements
 
-Add real authentication (JWT)
+Add real authentication with JWT
 
-User roles (Admin/Support/User)
+Add user roles (admin / user)
 
-Docker setup (frontend + backend)
+Pagination & filtering for tickets
 
-CI/CD pipeline with GitHub Actions
+Deployment of backend on Render or Railway
 
 💡 Author: KALAIMANI B
 📧 Contact: kalaimanib27@gmail.com
