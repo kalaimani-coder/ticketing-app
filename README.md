@@ -71,7 +71,6 @@ Deployed live on **Vercel**: [ticketing-app-2dyp.vercel.app](https://ticketing-a
 
 ### 1. Clone Repository
 --sh
-git clone https://github.com/YOUR_USERNAME/ticketing-app.git
 cd ticketing-app
 
 2. Setup Backend
